@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Distributed system</title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<!-- CryptoJS saved locally since the web version returned 404 -->
+<script src="D:\Ohjelmointi\hajautetut\CryptoJS v3.1.2\rollups\aes.js"></script>
+<script src="distributed_system.js"></script>
+</head>
+
+<body onload="init()">
+<div id="arena" style="float:left;width:500px;height:500px;border:1px solid #000;"></div>
+
+<!-- buttons for creating a game session -->
+<button id="createSession" style="float:left;" onClick=createSession()>Create session</button>
+<button id="getSessions" style="float:left;" onClick=getSessions()>Get sessions</button>
+<button id="joinSession" style="float:left;" onClick=joinSession()>Join session</button>
+<button id="startSession" style="float:left;" onClick=startSession()>Start session</button>
+<button id="endSession" style="float:left;" onClick=endSession()>End session</button>
+<div id="sessionList" style="float:left; width:200px; height:300px;border:1px solid #000;"></div>
+<button id="startGame" onClick=startGame()>start game</button>
+
+<!-- chat box and inputs -->
+<div id="chat" style="white-space:pre; overflow:scroll; width:600px; height:200px;border:1px solid #000;"></div>
+<input type="text" id="chatInput" value="">
+<button id="submit" onclick=submitMessage()>submit</button>
+<button id="joinChannel" onclick=joinChannel()>join chat channel</button>
+<div id="currentChannel" current_channel="None">current channel: None</div>
+</body>
+</html>
